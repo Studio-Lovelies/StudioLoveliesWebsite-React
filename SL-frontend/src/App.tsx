@@ -9,21 +9,23 @@ import Contact from "./pages/Contact";
 import About from "./pages/About";
 import ErrorPage from "./pages/ErrorPage";
 // Styles
-import "./styles/App.css";
+import { StyledApp } from "./styles";
 
 function App() {
   return (
-    <Router>
-      <Navbar />
-      <Routes>
-        <Route path="/" element={<Home />} />
-        <Route path="/projects" element={<Projects />} />
-        <Route path="/epik" element={<Epik />} />
-        <Route path="/contact" element={<Contact />} />
-        <Route path="/about" element={<About />} />
-        <Route path="/404" element={<ErrorPage />} />
-      </Routes>
-    </Router>
+    <StyledApp>
+      <Router>
+        <Navbar />
+        <Routes>
+          <Route path="/" element={<Home />} />
+          <Route path="/projects" element={<Projects />} />
+          <Route path="/epik" element={<Epik />} />
+          <Route path="/contact" element={<Contact />} />
+          <Route path="/about" element={<About />} />
+          <Route path="/404" element={<ErrorPage />} />
+        </Routes>
+      </Router>
+    </StyledApp>
   );
 }
 
